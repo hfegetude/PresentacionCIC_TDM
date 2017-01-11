@@ -1,62 +1,113 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>TDM</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css">
+	<title>TDM</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h1>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>
 						TDM
 					</h1>
-					<p style=""> "Time Division Multiplexing" <p>
-				</section>
-				<section>
-					<p style="font-size: 130%; font-weight: bold;"> Un poco de historia... </p>
-					<ul style="font-size: 70%">
-						<li>  <b> En 1870 </b> es usado por primera vez por Émile Baudot para aplicaciones en el telegrafo, consiguientdo enrutar diferentes conexiones sobre un mismo enlace </li>
-						<li> <b> En 1953 </b> es usado por segunda vez, la compañia RCA Communications implementa un canal TDM de 24 canales entre sus facilidades </li>
-						<li> <b>En 1962 </b>los ingenieros de Bell Labs implementan el primer banco D1 capaz de combinar 24 llamadas sobre 4 cables de cobre </li>
-					</ul>
-				</section>
+				<p style=""> "Time Division Multiplexing"
+					<p>
+			</section>
+			<section>
+				<p style="font-size: 130%; font-weight: bold;"> Un poco de historia... </p>
+				<ul style="font-size: 70%">
+					<li> <b> En 1870 </b> es usado por primera vez por Émile Baudot para aplicaciones en el telegrafo, consiguientdo enrutar diferentes conexiones sobre un mismo enlace </li>
+					<li> <b> En 1953 </b> es usado por segunda vez, la compañia RCA Communications implementa un canal TDM de 24 canales entre sus facilidades </li>
+					<li> <b>En 1962 </b>los ingenieros de Bell Labs implementan el primer banco D1 capaz de combinar 24 llamadas sobre 4 cables de cobre </li>
+				</ul>
+			</section>
+			<section>
+				<p style="font-size: 130%; font-weigth: bold"> TDM 101 </p>
+				<div style="width: 400px">
+				<ul  style="font-size: 70%">
+					<li> El usuario accede al medio cada $T_F$ segundos </li>
+					<li> Durante ese periodo se le asigna un slot de $T_{sl}$ por el que puede transmitir </li>
+					<li> El Transmisor enviará toda la información producida durante los $T_F - T_{sl}$ durante su slot de tiempo </li>
+				</ul>
 			</div>
+					<img src="img/tdmbasic" style="position: absolute; left: 450px; top: 150px; width: 400px">
+			</section>
+			<section data-markdown>
+				<script type="text/template">
+Ventajas:
+	- Bajo costo.
+	- Menor tamaño de quipos terminales.
+	- Menor consumo de los emisores.
+Desventajas:
+	- Complejidad técnica.
+	- Cosot inicial alto.
+	- Mayor ruido.
+	- No deja espacio para muchos canales.
+				</script>
+		</section>
+
+		<section>
+			
+		</section>
+
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-				slideNumber: true,
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+			slideNumber: true,
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function() {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+
+				{
+					src: 'plugin/math/math.js',
+					async: true
+				}
+
+			]
+		});
+	</script>
+</body>
+
 </html>
