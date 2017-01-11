@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>TDM</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,20 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>
+						TDM
+					</h1>
+					<p style=""> "Time Division Multiplexing" <p>
+				</section>
+				<section>
+					<p style="font-size: 130%; font-weight: bold;"> Un poco de historia... </p>
+					<ul style="font-size: 70%">
+						<li>  <b> En 1870 </b> es usado por primera vez por Émile Baudot para aplicaciones en el telegrafo, consiguientdo enrutar diferentes conexiones sobre un mismo enlace </li>
+						<li> <b> En 1953 </b> es usado por segunda vez, la compañia RCA Communications implementa un canal TDM de 24 canales entre sus facilidades </li>
+						<li> <b>En 1962 </b>los ingenieros de Bell Labs implementan el primer banco D1 capaz de combinar 24 llamadas sobre 4 cables de cobre </li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
@@ -36,7 +48,7 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
+				slideNumber: true,
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
